@@ -23,11 +23,11 @@ const StackNavigation = () => (
         }}
     >
         <Stack.Screen name="Usuários" component={MainView} />
-        <Stack.Screen name="User" component={UserView} />
+        <Stack.Screen name="User" component={UserView} options={({ route }) => ({ title: route.params.name })} />
     </Stack.Navigator >
 );
 
-export default function Routes() {
+export default function Routes(route) {
     return (
         <>
             <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
